@@ -1,0 +1,22 @@
+nav
+    ul.nav__left
+        li.nav__element
+            a(href '#')
+                .nav__element--wrapper
+                    | D Tunes
+        li.nav__element
+            a(href '/') Home
+        li.nav__element
+            a(href '/playlist') Playlist
+    ul.nav__middle
+        div.searchbox
+            button.searchbox__button 🔎
+            input.searchbox__input(type='text' placeholder='Search')
+    ul.nav__right
+        if user
+            li.nav__element.nav__element--logout Logout
+        else
+            li.nav__element
+                a(href='/login') Login
+            li.nav__element
+                a(href='/signup') Sign up
